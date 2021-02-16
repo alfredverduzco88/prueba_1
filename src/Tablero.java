@@ -26,8 +26,8 @@ class Tablero extends JPanel
 	private JPanel panelEspacioLogo;
 	Boleto [] estacionamiento= new Boleto[50]; // Aqui se declara el arreglo de 50
 	private JButton logo;
-	Dimension tamaño = new  Dimension(700,500); //tamanio de el panel de trabajo
-	Dimension tamañoEspacioLogo = new  Dimension(700,170); //tamanio de el panel de trabajo
+	Dimension tamaÃ±o = new  Dimension(700,500); //tamanio de el panel de trabajo
+	Dimension tamaÃ±oEspacioLogo = new  Dimension(700,170); //tamanio de el panel de trabajo
 	Date cal =Calendar.getInstance().getTime();
 	private JButton boton;
 	private JButton botonSalida;
@@ -36,22 +36,22 @@ class Tablero extends JPanel
 	Color colorazul=new Color(8, 75, 138);
 	public Tablero()
 	{
-		//creación de paneles
+		//creaciÃ³n de paneles
 		FlowLayout miFlowLayout = new FlowLayout( FlowLayout.CENTER,5,5 );
 		panel = new JPanel();
 		panelEspacioLogo=new JPanel();
 		panelEspacioLogo.setLayout(miFlowLayout);
-		//Asignarle tamaño a los paneles
-		panel.setPreferredSize(tamaño);
-		panelEspacioLogo.setPreferredSize(tamañoEspacioLogo);
+		//Asignarle tamaÃ±o a los paneles
+		panel.setPreferredSize(tamaÃ±o);
+		panelEspacioLogo.setPreferredSize(tamaÃ±oEspacioLogo);
 		panelEspacioLogo.setLocation(0,0);
 		//Agregar panel de logo al panel principal
 		panel.add(panelEspacioLogo,BorderLayout.LINE_START);
 
 		// Agregar logo a la pantalla    
 		logo=new JButton(new ImageIcon(getClass().getResource("img/" +"logo.jpg")));
-		tamaño = new  Dimension(150,150); 
-		logo.setPreferredSize(tamaño);
+		tamaÃ±o = new  Dimension(150,150); 
+		logo.setPreferredSize(tamaÃ±o);
 		logo.setLocation(50, 0);
 		panelEspacioLogo.add(logo,BorderLayout.LINE_START);
 		
@@ -70,37 +70,37 @@ class Tablero extends JPanel
 		hora.setForeground(colorazul);
 		panelEspacioLogo.add(hora, BorderLayout.AFTER_LINE_ENDS);
 	
-		//Agregar botón Registrar entrada
+		//Agregar botÃ³n Registrar entrada
 		boton = new JButton("Registrar entrada");		
-		tamaño = new  Dimension(200,80); 
-		boton.setPreferredSize(tamaño);
+		tamaÃ±o = new  Dimension(200,80); 
+		boton.setPreferredSize(tamaÃ±o);
 		boton.setFont(new Font("Verdana", Font.BOLD, 16));
 		boton.setForeground(Color.WHITE);
-		boton.setBackground(colorazul);
+		boton.setBackground(colorrojo);
 		panel.add(boton, BorderLayout.CENTER);
 		
-		//Agregar botón Registrar salida
+		//Agregar botÃ³n Registrar salida
 		botonSalida = new JButton("Registrar salida");		
-		tamaño = new  Dimension(200,80); 
-		botonSalida.setPreferredSize(tamaño);
+		tamaÃ±o = new  Dimension(200,80); 
+		botonSalida.setPreferredSize(tamaÃ±o);
 		botonSalida.setFont(new Font("Verdana", Font.BOLD, 16));
 		botonSalida.setForeground(Color.WHITE);
 		botonSalida.setBackground(colorazul);
 		panel.add(botonSalida, BorderLayout.CENTER);
 
-		//Agregar botón Cobro de boleto
+		//Agregar botÃ³n Cobro de boleto
 		botonCobroBoleto = new JButton("Cobro de boleto");		
-		tamaño = new  Dimension(200,80); 
-		botonCobroBoleto.setPreferredSize(tamaño);
+		tamaÃ±o = new  Dimension(200,80); 
+		botonCobroBoleto.setPreferredSize(tamaÃ±o);
 		botonCobroBoleto.setFont(new Font("Verdana", Font.BOLD, 16));
 		botonCobroBoleto.setForeground(Color.WHITE);
 		botonCobroBoleto.setBackground(colorazul);
 		panel.add(botonCobroBoleto, BorderLayout.CENTER);
 		
-		//Agregar botón Disponibilidad
+		//Agregar botÃ³n Disponibilidad
 		botonDisponibilidad = new JButton("Disponibilidad");		
-		tamaño = new  Dimension(200,80); 
-		botonDisponibilidad.setPreferredSize(tamaño);
+		tamaÃ±o = new  Dimension(200,80); 
+		botonDisponibilidad.setPreferredSize(tamaÃ±o);
 		botonDisponibilidad.setFont(new Font("Verdana", Font.BOLD, 16));
 		botonDisponibilidad.setForeground(Color.WHITE);
 		botonDisponibilidad.setBackground(colorazul);
